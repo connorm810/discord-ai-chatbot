@@ -48,6 +48,15 @@ async def generate_image(ctx, *args):
         await ctx.channel.send("Sorry, but I'm having a little trouble. Try asking that again.")
 
 
+@client.command(
+    name="code",
+    brief="Provides link to GitHub page",
+    help="Provides a direct link to the GitHub repo for this Discord bot."
+)
+async def code_link(ctx):
+    await ctx.channel.send("Sure, here you go: https://github.com/connorm810/discord-ai-chatbot/tree/master")
+
+
 @client.event
 async def on_message(message):
     # Don't respond to self
