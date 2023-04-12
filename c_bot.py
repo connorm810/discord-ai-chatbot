@@ -1,5 +1,3 @@
-# URL = https://discord.com/api/oauth2/authorize?client_id=1095554417031385129&permissions=2147494912&scope=applications.commands%20bot
-
 import os
 import discord
 import openai
@@ -14,7 +12,7 @@ openai.api_key = OPENAI_TOKEN
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix="!", intents=intents)
 
-
+# !genimg command that generates a image based on user's prompt
 @client.command(
     name="genimg",
     brief="Generates an image using Stable Diffusion",
@@ -48,6 +46,7 @@ async def generate_image(ctx, *args):
         await ctx.channel.send("Sorry, but I'm having a little trouble. Try asking that again.")
 
 
+# !code command that provides link to github repo
 @client.command(
     name="code",
     brief="Provides link to GitHub page",
@@ -57,6 +56,7 @@ async def code_link(ctx):
     await ctx.channel.send("Sure, here you go: https://github.com/connorm810/discord-ai-chatbot/tree/master")
 
 
+# Listens for mentions in chat and responds using OpenAI
 @client.event
 async def on_message(message):
     # Don't respond to self
