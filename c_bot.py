@@ -12,7 +12,8 @@ openai.api_key = OPENAI_TOKEN
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix="!", intents=intents)
 
-# !genimg command that generates a image based on user's prompt
+
+# !genimg command that generates an image based on user's prompt
 @client.command(
     name="genimg",
     brief="Generates an image using Stable Diffusion",
