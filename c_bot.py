@@ -57,7 +57,7 @@ async def code_link(ctx):
     await ctx.channel.send("Sure, here you go: https://github.com/connorm810/discord-ai-chatbot/tree/master")
 
 
-# Listens for mentions in chat and responds using OpenAI
+# Listens for mentions in chat and responds using OpenAI's GPT-3.5 Davinci 3 Model
 @client.event
 async def on_message(message):
     # Don't respond to self
